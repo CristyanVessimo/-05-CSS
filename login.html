@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login — Animes Shonen</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="images/img.favicon.jpeg">
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <span class="logo-icone">⚡</span>
+                    <span class="logo-texto">
+                        <span class="logo-titulo">Animes Shonen</span>
+                        <span class="logo-sub">Evolução de uma geração</span>
+                    </span>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="cdz.html">CDZ</a></li>
+                        <li><a href="dbz.html">DBZ</a></li>
+                        <li><a href="bleach.html">Bleach</a></li>
+                        <li><a href="login.html" class="ativo btn btn-login">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== MAIN ========== -->
+    <main>
+        <div class="container">
+
+            <h1 class="page-titulo">📝 Participe da Comunidade</h1>
+            <p class="page-subtitulo">Qual é o seu anime shonen favorito?</p>
+
+            <!-- ===== FORMULÁRIO (5+ controles) ===== -->
+            <section>
+                <div class="form-box">
+                    <h2 class="secao-titulo">Participe da Enquete!</h2>
+                    <p class="form-desc">Conta pra gente suas preferências e ajude a montar o ranking da comunidade.</p>
+
+                    <!-- Controle 1 — Nome -->
+                    <div class="campo largo">
+                        <label for="f-nome">Seu Nome</label>
+                        <input type="text" id="f-nome" placeholder="Como quer ser chamado?" />
+                    </div>
+
+                    <!-- Controle 2 — Email -->
+                    <div class="campo largo">
+                        <label for="f-email">E-mail</label>
+                        <input type="email" id="f-email" placeholder="seu@email.com" />
+                    </div>
+
+                    <!-- Controle 3 — Anime favorito (select) -->
+                    <div class="campo largo">
+                        <label for="f-anime">Seu Anime Shonen Favorito</label>
+                        <select id="f-anime">
+                            <option value="">Selecione...</option>
+                            <option>Cavaleiros do Zodíaco (CDZ)</option>
+                            <option>Dragon Ball Z (DBZ)</option>
+                            <option>Bleach</option>
+                            <option>Naruto</option>
+                            <option>One Piece</option>
+                            <option>Outro</option>
+                        </select>
+                    </div>
+
+                    <!-- Controle 4 — Quando começou a ver animes (radio) -->
+                    <div class="campo largo">
+                        <label>Quando você começou a assistir animes?</label>
+                        <div class="opcoes-radio">
+                            <label class="opcao">
+                                <input type="radio" name="epoca" value="90s" /> Anos 90
+                            </label>
+                            <label class="opcao">
+                                <input type="radio" name="epoca" value="2000s" /> Anos 2000
+                            </label>
+                            <label class="opcao">
+                                <input type="radio" name="epoca" value="2010s" /> Anos 2010
+                            </label>
+                            <label class="opcao">
+                                <input type="radio" name="epoca" value="2020s" /> Anos 2020
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Controle 5 — Plataformas (checkbox) -->
+                    <div class="campo largo">
+                        <label>Onde você assiste animes?</label>
+                        <div class="opcoes-check">
+                            <label class="opcao"><input type="checkbox" /> Crunchyroll</label>
+                            <label class="opcao"><input type="checkbox" /> Netflix</label>
+                            <label class="opcao"><input type="checkbox" /> YouTube</label>
+                            <label class="opcao"><input type="checkbox" checked /> TV aberta</label>
+                            <label class="opcao"><input type="checkbox" /> Prime Video</label>
+                        </div>
+                    </div>
+
+                    <!-- Controle 6 — Nota (number) -->
+                    <div class="campo largo">
+                        <label for="f-nota">Qual nota você dá para o seu anime favorito? (1 a 10)</label>
+                        <input type="number" id="f-nota" min="1" max="10" placeholder="Ex: 9" />
+                    </div>
+
+                    <!-- Controle 7 — Comentário (textarea) -->
+                    <div class="campo largo">
+                        <label for="f-comentario">Deixe um comentário ou recomendação</label>
+                        <textarea id="f-comentario" placeholder="Qual é o seu arco favorito? Por que gosta tanto?"></textarea>
+                    </div>
+
+                    <button class="btn form-submit">Enviar Resposta ⚡</button>
+                </div>
+            </section>
+
+            <!-- Navegação -->
+            <div class="btn-group">
+                <a href="index.html" class="btn btn-outline">← Voltar ao Início</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <span class="footer-nome">⚡ Animes Shonen</span>
+                    <p class="footer-desc">Um site dedicado à evolução dos animes shonen e ao seu impacto cultural no mundo todo.</p>
+                    <div class="redes-sociais">
+                        <a href="#" class="rede-btn" title="Instagram">📸</a>
+                        <a href="#" class="rede-btn" title="Twitter">🐦</a>
+                        <a href="#" class="rede-btn" title="YouTube">▶️</a>
+                        <a href="#" class="rede-btn" title="Discord">💬</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-titulo">Páginas</p>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="cdz.html">Cavaleiros do Zodíaco</a></li>
+                        <li><a href="dbz.html">Dragon Ball Z</a></li>
+                        <li><a href="bleach.html">Bleach</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-titulo">Categorias</p>
+                    <ul class="footer-links">
+                        <li><a href="#">Animes Clássicos</a></li>
+                        <li><a href="#">Mangás</a></li>
+                        <li><a href="#">Personagens Icônicos</a></li>
+                        <li><a href="#">Trilha Sonora</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-titulo">Contato</p>
+                    <ul class="contato-lista">
+                        <li>📧 cvgo@aluno.ifnmg.edu.br</li>
+                        <li>📱 (11) 4002-8922</li>
+                        <li>📍 Salinas, MG — Brasil</li>
+                        <li>🕐 Seg–Sex, 09h às 18h</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Animes Shonen — Todos os direitos reservados.</p>
+                <p>Feito com ❤️ para fãs de anime</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

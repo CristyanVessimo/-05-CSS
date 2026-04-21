@@ -1,0 +1,655 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+/* --- Reset --- */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Variáveis de cor --- */
+:root {
+    --azul:     #38bdf8;
+    --azul-esc: #0ea5e9;
+    --amarelo:  #facc15;
+    --branco:   #ffffff;
+    --preto:    #000000;
+    --card-bg:  rgba(0, 0, 0, 0.55);
+}
+
+/* --- Body com fundo escuro --- */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: var(--branco);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Container centralizado com margens --- */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+/* =============================================
+   HEADER
+   ============================================= */
+header {
+    background-color: rgba(0, 0, 0, 0.95);
+    border-bottom: 2px solid var(--azul);
+    padding: 0.8rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+}
+
+.logo-icone { font-size: 2rem; line-height: 1; }
+
+.logo-texto {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.logo-titulo {
+    font-family: 'Bangers', cursive;
+    font-size: 1.3rem;
+    color: var(--azul);
+    letter-spacing: 2px;
+}
+
+.logo-sub {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.65rem;
+    color: #94a3b8;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Nav */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0.2rem;
+}
+
+nav ul li a {
+    display: block;
+    padding: 0.5rem 1.1rem;
+    color: var(--branco);
+    text-decoration: none;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: all 0.25s;
+}
+
+nav ul li a:hover,
+nav ul li a.ativo {
+    color: var(--azul);
+    border-color: var(--azul);
+    background: rgba(56,189,248,0.08);
+}
+
+/* =============================================
+   MAIN
+   ============================================= */
+main {
+    flex: 1;
+    padding: 2.5rem 0;
+}
+
+/* =============================================
+   TÍTULOS DE PÁGINA
+   ============================================= */
+.page-titulo {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    color: var(--azul);
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 0.3rem;
+}
+
+.page-subtitulo {
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+
+/* =============================================
+   TEXTO
+   ============================================= */
+p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #e2e8f0;
+    max-width: 800px;
+    margin: 0 auto 1.2rem;
+    text-align: center;
+}
+
+/* =============================================
+   SEÇÕES
+   ============================================= */
+section { margin-bottom: 3rem; }
+
+.secao-titulo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    color: var(--amarelo);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.secao-titulo::before,
+.secao-titulo::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    max-width: 100px;
+}
+
+.secao-titulo::before { background: linear-gradient(to right, transparent, var(--azul)); }
+.secao-titulo::after  { background: linear-gradient(to left,  transparent, var(--azul)); }
+
+/* =============================================
+   IMAGENS
+   ============================================= */
+img {
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 12px;
+    border: 2px solid var(--azul);
+    max-width: 320px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(56,189,248,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 35px rgba(56,189,248,0.55);
+}
+
+/* =============================================
+   CARDS LADO A LADO
+   ============================================= */
+.cards-grid {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid rgba(56,189,248,0.3);
+    border-radius: 12px;
+    padding: 1.5rem 1.25rem;
+    flex: 1 1 240px;
+    max-width: 300px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--branco);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.card:hover {
+    border-color: var(--azul);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(56,189,248,0.25);
+}
+
+.card-icone { font-size: 2.8rem; }
+
+.card h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 1.4rem;
+    color: var(--azul);
+    letter-spacing: 1px;
+}
+
+.card p {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin: 0;
+}
+
+/* =============================================
+   LAYOUT LADO A LADO
+   ============================================= */
+.split {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.split-texto { flex: 1 1 300px; }
+.split-texto p { text-align: left; margin: 0 0 1rem; }
+.split-midia  { flex: 1 1 280px; display: flex; justify-content: center; }
+.split-midia img { margin: 0; }
+
+/* =============================================
+   VÍDEO
+   ============================================= */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 2px solid var(--azul);
+    box-shadow: 0 0 25px rgba(56,189,248,0.3);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+}
+
+/* =============================================
+   LISTAS COM SUBITENS
+   ============================================= */
+.lista-anime {
+    list-style: none;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.lista-anime > li {
+    background: var(--card-bg);
+    border: 1px solid rgba(56,189,248,0.25);
+    border-radius: 8px;
+    padding: 0.8rem 1.2rem 0.8rem 2rem;
+    margin-bottom: 0.75rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--azul);
+    position: relative;
+}
+
+.lista-anime > li::before {
+    content: '▶';
+    position: absolute;
+    left: 0.7rem;
+    font-size: 0.65rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--amarelo);
+}
+
+.lista-anime ul {
+    list-style: none;
+    padding-left: 1rem;
+    margin-top: 0.4rem;
+}
+
+.lista-anime ul li {
+    font-size: 0.88rem;
+    font-weight: 400;
+    color: #cbd5e1;
+    padding: 0.15rem 0 0.15rem 1rem;
+    position: relative;
+}
+
+.lista-anime ul li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--azul);
+}
+
+/* =============================================
+   BOTÕES
+   ============================================= */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    background-color: var(--azul);
+    color: var(--preto);
+    text-decoration: none;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.25s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--azul-esc);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(56,189,248,0.4);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--azul);
+    border: 2px solid var(--azul);
+}
+
+.btn-outline:hover {
+    background: rgba(56,189,248,0.1);
+    color: var(--azul);
+}
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+/* =============================================
+   FORMULÁRIO
+   ============================================= */
+.form-box {
+    background: var(--card-bg);
+    border: 1px solid rgba(56,189,248,0.3);
+    border-radius: 12px;
+    padding: 2rem 2.5rem;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.form-box h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 1.6rem;
+    color: var(--azul);
+    letter-spacing: 2px;
+    margin-bottom: 0.3rem;
+}
+
+.form-desc {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 1.8rem !important;
+    text-align: left !important;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1.1rem;
+    flex: 1 1 200px;
+}
+
+.campo.largo { flex: 1 1 100%; }
+
+.campo label {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #94a3b8;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="number"],
+.campo select,
+.campo textarea {
+    background: rgba(0,0,0,0.5);
+    border: 1px solid rgba(56,189,248,0.3);
+    border-radius: 8px;
+    padding: 0.65rem 1rem;
+    color: var(--branco);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95rem;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: var(--azul);
+    box-shadow: 0 0 10px rgba(56,189,248,0.2);
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder { color: #475569; }
+
+.campo select option { background: #0f172a; }
+
+.campo textarea { resize: vertical; min-height: 100px; }
+
+.opcoes-radio,
+.opcoes-check {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.2rem;
+}
+
+.opcao {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    cursor: pointer;
+}
+
+.opcao:hover { color: var(--branco); }
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: var(--azul);
+    width: 16px; height: 16px;
+    cursor: pointer;
+}
+
+.form-submit {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    letter-spacing: 2px;
+}
+
+/* =============================================
+   INFO BOX
+   ============================================= */
+.info-box {
+    background: rgba(56,189,248,0.07);
+    border-left: 3px solid var(--azul);
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem auto;
+    font-size: 0.93rem;
+    color: #cbd5e1;
+    max-width: 800px;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer {
+    background: rgba(0,0,0,0.95);
+    border-top: 2px solid var(--azul);
+    padding: 2.5rem 0 1.2rem;
+    margin-top: auto;
+}
+
+.footer-grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.footer-col { flex: 1 1 180px; }
+
+.footer-nome {
+    font-family: 'Bangers', cursive;
+    font-size: 1.2rem;
+    color: var(--azul);
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.footer-desc {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.6;
+    text-align: left;
+    margin: 0;
+    max-width: 220px;
+}
+
+.footer-titulo {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--branco);
+    margin-bottom: 0.9rem;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.footer-links a {
+    color: #64748b;
+    text-decoration: none;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--azul); }
+
+.contato-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contato-lista li {
+    font-size: 0.85rem;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.rede-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px; height: 36px;
+    background: rgba(56,189,248,0.08);
+    border: 1px solid rgba(56,189,248,0.25);
+    border-radius: 8px;
+    color: #64748b;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.rede-btn:hover {
+    color: var(--azul);
+    border-color: var(--azul);
+    box-shadow: 0 0 10px rgba(56,189,248,0.25);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(56,189,248,0.15);
+    padding-top: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.footer-bottom p {
+    font-size: 0.78rem;
+    color: #475569;
+    text-align: left;
+    margin: 0;
+    max-width: none;
+}
+
+/* =============================================
+   RESPONSIVO
+   ============================================= */
+@media (max-width: 700px) {
+    .header-inner { flex-direction: column; gap: 0.6rem; }
+    nav ul { flex-wrap: wrap; justify-content: center; }
+    .split { flex-direction: column; }
+    .footer-grid { gap: 1.5rem; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+    .form-box { padding: 1.5rem 1.2rem; }
+}
