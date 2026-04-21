@@ -34,21 +34,3 @@ animes-shonen/
     └── img_bleach.jpeg
 ```
 
-## Requisitos Atendidos
-
-- ✅ 4 páginas HTML com estrutura semântica
-- ✅ CSS único em `css/style.css`
-- ✅ Imagens em `images/`
-- ✅ Cabeçalho com logo, título e menu em todas as páginas
-- ✅ Rodapé com contato e redes sociais em todas as páginas
-- ✅ Elementos de texto (parágrafos, títulos)
-- ✅ Imagens das capas de mangá
-- ✅ Vídeo do YouTube (dbz.html)
-- ✅ Lista com subitens (index.html, cdz.html, dbz.html, bleach.html)
-- ✅ Formulário com 7 controles: text, email, select, radio, checkbox, number, textarea (bleach.html)
-- ✅ Conteúdo centralizado com `.container` e margens
-- ✅ Pseudo-classes: `:hover` e `:focus`
-- ✅ Flexbox em todo o layout
-- ✅ 4 cores: azul `#38bdf8`, amarelo `#facc15`, branco `#ffffff`, preto `#000`
-- ✅ 4 fontes: Bangers, Rajdhani, Orbitron, Open Sans
-- ✅ Conteúdos lado a lado: `.split`, `.cards-grid`
